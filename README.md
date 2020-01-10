@@ -1,9 +1,9 @@
 #Configurasi Sec7ion
 * Apache
-	1. Httpd.conf
+	Httpd.conf
 * Zsh
-	1. Theme
-	2. Plugins
+	Theme
+	Plugins
 * Nvim
-	1. Schemes
-	2. Syntax
+	Schemes
+	Syntax
