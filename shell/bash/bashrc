@@ -16,4 +16,4 @@ alias zshrc='nvim ~/.zshrc' # Quick access to the ~/.zshrc file
 alias die='killall -9'
 
 PS1="\[\e[1;37m\]Sec\[\e[1;31m\]7\[\e[1;37m\]ion[\[\e[1;34m\]\w\[\e[1;37m\]]:
->>> \[\e[0;32m\]"
+>>> \[\e[0;37m\]"
