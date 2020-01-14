@@ -80,7 +80,7 @@ prompt_end() {
 
 # Context: user@hostname (who am I and where am I)
 prompt_context() {
-    prompt_segment black red " Sec7ion "
+    prompt_segment black white " Sec%{%F{red}%}7%{%F{white}%}ion "
 }
 
 # Git: branch/detached head, dirty status
