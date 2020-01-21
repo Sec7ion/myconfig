@@ -533,7 +533,7 @@ syn keyword phpKeyword echo continue case default break return goto as endif end
 " Only create keyword groupings for these if not doing folding, otherwise they take precedence over the regions
 " used for folding.
 if php_folding != 1
-  syn keyword phpKeyword if else elseif while do for foreach function switch class abstract extends interface implements static final var public private protected const trait contained
+  syn keyword phpKeyword if else elseif while do for foreach function switch class abstract extends interface implements static final var public private protected const self parent global trait contained
 
   " Exception Keywords
   syn keyword phpKeyword try catch finally throw contained
@@ -549,7 +549,7 @@ syn keyword phpKeyword die exit eval empty isset unset list instanceof insteadof
 syn keyword phpInclude include include_once require require_once namespace contained
 
 " Types
-syn keyword phpType bool[ean] int[eger] real double float string array object self parent global this stdClass callable iterable void contained
+syn keyword phpType bool[ean] int[eger] real double float string array object this stdClass callable iterable void contained
 " Special values
 syn keyword phpNullValue null contained
 
@@ -557,11 +557,10 @@ syn keyword phpNullValue null contained
 syn match phpOperator       "[-=+%^&|*!.~?:]" contained display
 syn match phpOperator       "[-+*/%^&|.]="  contained display
 syn match phpOperator       "/[^*/]"me=e-1  contained display
-syn match phpOperator       "\$"  contained display
 syn match phpOperator       "&&\|\<and\>" contained display
 syn match phpOperator       "||\|\<x\=or\>" contained display
 syn match phpOperator       "[!=<>]=" contained display
-syn match phpOperator       "[<>]"  contained display
+syn match phpOperator       "[<>]"  contained display 
 syn match phpMemberSelector "->\|::"  contained display
 syn match phpVarSelector    "\$"  contained display
 " highlight static and object variables inside strings
@@ -571,7 +570,7 @@ syn match phpMethod /\h\w*/ contained
 syn match phpSplatOperator  "\.\.\." contained display
 
 " Identifier
-syn match  phpIdentifier         "$\h\w*"  contained contains=phpSuperglobals,phpVarSelector display
+syn match  phpIdentifier         "$\$*\h\w*"  contained contains=phpSuperglobals,phpVarSelector display
 syn match  phpIdentifierSimply   "${\h\w*}"  contains=phpOperator,phpParent  contained display
 syn region phpIdentifierComplex  matchgroup=phpParent start="{\$"rs=e-1 end="}"  contains=phpIdentifier,phpIdentifierSimply,phpSpecialChar,phpMethodsVar,phpStringSingle,phpStringDouble,phpBacktick,phpStrEsc contained extend
 

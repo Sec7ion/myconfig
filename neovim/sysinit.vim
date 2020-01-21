@@ -16,8 +16,8 @@ set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
 set fileformats=unix,dos,mac
-"packadd! onedark
-"colorscheme onedark
+packadd! onedark
+colorscheme onedark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
 let g:onedark_termcolors=256
