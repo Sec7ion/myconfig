@@ -16,6 +16,8 @@ set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
 set fileformats=unix,dos,mac
+
+" OneDark Theme
 packadd! onedark
 colorscheme onedark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -23,14 +25,7 @@ set termguicolors
 let g:onedark_termcolors=256
 let g:onedark_hide_endofbuffer=1
 
+" Plugin
 call plug#begin()
     Plug 'mhinz/vim-startify'
-    Plug 'scrooloose/nerdtree'
 call plug#end()
-
-let NERDTreeIgnore = ['\.pyc$', '\.o$', '\.so$', '\.a$', '\.swp', '*\.swp', '\.swo', '\.swn', '\.swh', '\.swm', '\.swl', '\.swk', '\.sw*$', '[a-zA-Z]*egg[a-zA-Z]*', '[a-zA-Z]*cache[a-zA-Z]*']
-let NERDTreeShowHidden=0
-let g:NERDTreeWinPos="left"
-let g:NERDTreeDirArrows=0
-let mapleader = " "
-map <C-t> :NERDTreeToggle<CR>
